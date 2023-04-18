@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Style css -->
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://bootswatch.com/5/morph/bootstrap.min.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Accueil</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">@biblio</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor03">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">Accueil
+                  <span class="visually-hidden">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="livres.html">Livres</a>
+              </li>  
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+          <h1 class="text-center my-3 bg-info text-light py-2" >Page listant des livres</h1>
+          <table class="table table-hover p_Tableau" id="p_Tableau">
+            <thead>
+              <tr class="table-info">
+                <th scope="col">Titre</th>
+                <th scope="col">Auteur</th>
+                <th scope="col">Nombre de page</th>
+                <th scope="col" colspan="2" class="text-center">Actions</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <a href=""  class="afficherForm btn btn-outline-info">Ajouter</a>
+      </div>
+      <div class="container">
+        <form action="" id="divAjoutLivre" class="d-none">
+          <fieldset>
+            <legend>Création d'un livre</legend>
+            <div class="form-group">
+               <label for="nom">Titre</label>
+               <input type="text" class="form-control" id="titre" placeholder="Entrer le titre">
+            </div>
+            <div class="form-group">
+               <label for="auteur">Password</label>
+               <input type="text" class="form-control" id="auteur" placeholder="Entrer l'auteur">
+            </div>
+            <div class="form-group">
+               <label for="pages">Pages</label>
+               <input type="number" class="form-control" id="pages" placeholder="Combien de pages">
+            </div>
+            <button type="submit" class="btn btn-primary mt-2" id="validationFormAjout">Ajouter</button>
+         </fieldset>
+        </form>
+      </div>
+      <div class="container">
+        <form action="" id="divModifLivre" class="d-none">
+          <fieldset>
+            <legend>Modification d'un livre</legend>
+            <div class="form-group">
+               <label for="nom">Titre</label>
+               <input type="text" class="form-control" id="titre" placeholder="Entrer le titre">
+            </div>
+            <div class="form-group">
+               <label for="auteur">Password</label>
+               <input type="text" class="form-control" id="auteur" placeholder="Entrer l'auteur">
+            </div>
+            <div class="form-group">
+               <label for="pages">Pages</label>
+               <input type="number" class="form-control" id="pages" placeholder="Combien de pages">
+            </div>
+            <input type="hidden" id="identifiant" value="">
+            <button type="submit" class="btn btn-primary mt-2" id="validationFormModif">Modifier</button>
+         </fieldset>
+        </form>
+      </div>
+
+      <script src="./javascript/main.js"></script>
+</body>
+</html>
